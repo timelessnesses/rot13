@@ -1,0 +1,13 @@
+[package]
+name = "tlns-rot13-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+better-panic = "0.3.0"
+dashmap = "6.0.1"
+rayon = "1.10.0"
+
+[profile.release]
+debug = true
+panic = "abort"
