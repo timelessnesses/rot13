@@ -93,6 +93,6 @@ impl Rot13EncryptionRayon {
     }
 
     pub fn decrypt<'a>(string: &'a str) -> String {
-        Rot13Encryption::encrypt(string)
+        Rot13EncryptionRayon::encrypt(string)
     }
 }
