@@ -9,14 +9,9 @@ fn main() {
     let start_of_time = std::time::Instant::now();
     let a = rot13::Rot13Encryption::encrypt("Hello world!");
     println!(
-        "Took (Single threaded): {}ns",
-        start_of_time.elapsed().as_nanos()
+        "Took (Single threaded): {} microseconds",
+        start_of_time.elapsed().as_micros()
     );
     assert_eq!(a, "Uryyb jbeyq!");
-    let a = rot13::Rot13EncryptionRayon::encrypt("Hello world!");
-    println!(
-        "Took (Multi-threaded): {}ns",
-        start_of_time.elapsed().as_nanos()
-    );
-    assert_eq!(a, "Uryyb jbeyq!");
+    assert_eq!(rot13::Rot13Encryption::decrypt(&a), "Hello world!");
 }

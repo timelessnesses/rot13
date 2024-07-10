@@ -10,4 +10,4 @@ rayon = "1.10.0"
 
 [profile.release]
 debug = true
-panic = "abort"
+# panic = "abort"
